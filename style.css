@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden;
+    margin: 0;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+#name-screen{
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: #272727;
+    animation: all 1s ease 1s;
+}
+
+@keyframes typing{
+    from{width: 0}
+    to{width:75%}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+#name-screen .name{
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.name h1{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    font-size: 70px;
+    border-right: .15em solid white;
+    width: 75%;
+}
+#name-screen .label{
+    font-size: 20px;
+    padding-top: 20%;
+    text-align: center;
+    color: #fff;
+}
+
+.scroll-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.scroll-button .scroll-button-text{
+    color: #fff;
+    animation: float 1s ease-in-out infinite;
+}
+
+.fa-chevron-down{
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    height: 0;
+}
+
+.fa-chevron-up{
+    color: #FFF;
+    font-size: 30px;
+}
+
+/*SOBRE MIM*/
+#aboutme{
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: #101010;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+#aboutme-rectangle{
+    display: flex;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.164);
+}
+#aboutme-rectangle img{
+    width: 296px;
+    height: 358px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#aboutme-rectangle .title{
+    font-size: 50px;
+    margin-left: 1rem;
+    margin-top: 4rem;
+}
+
+#aboutme-rectangle .text-content{
+    text-align: justify;
+    margin: 0 1rem;
+    font-size: 18px;
+}
+
+#aboutme .scroll-button:last-child{
+    margin-top: 5rem;
+}
+
+/*PROJETOS*/
+
+#projects{
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: #E9E9E9;
+}
+
+#projects .fa-chevron-down{
+    color: #272727;
+}
+
+#projects .fa-chevron-up{
+    color: #272727;
+}
+
+#projects .title{
+    font-size: 50px;
+    text-align: center;
+    color: #272727;
+    margin-top: 2rem;
+}
+
+#projects .cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+
+}
+
+#projects a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.chevron-down-container{
+    margin-top: 7rem;
+}
+
+#projects .card{
+    width: 15rem;
+    height: 18rem;
+    background-color: #272727;
+    border-radius: 15px;
+    padding-top: 2rem;
+}
+#projects .card-img img{
+    width: 10rem;
+    height: 10rem;
+}
+
+#projects .card-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects .card-title{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*HOBBIES*/
+
+#hobbies{
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: #393939;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#hobbies .title{
+    font-size: 50px;
+    text-align: center;
+    color: #FFF;
+    margin-top: 2rem;
+}
+
+.first-hobbie{
+    background-color: #E9E9E9;
+    width: 25%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.5s ease 0.3s;
+    overflow: hidden;
+}
+.second-hobbie{
+    background-color: #D4D4D4;
+    width: 25%;
+    transition: 0.5s ease 0.3s;
+    overflow: hidden;
+}
+.third-hobbie{
+    background-color: #BEBEBE;
+    width: 25%;
+    transition: 0.5s ease 0.3s;
+    overflow: hidden;
+}
+.fourth-hobbie{
+    background-color: #A9A9A9;
+    width: 25%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s ease 0.3s;
+    overflow: hidden;
+}
+
+#hobbies-rectangle{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.164);
+    height: 25rem;
+    cursor: pointer;
+}
+
+#hobbies .icon{
+    font-size: 100px;
+    color: #272727;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.hobbie-title{
+    text-align: center;
+    font-size: 25px;
+    color: #272727;
+    transition: 0.5s ease 0.3s;
+}
+
+.hobbie-header{
+    transition: 0.5s ease 0.3s;
+}
+
+.first-hobbie:hover, .second-hobbie:hover, .third-hobbie:hover, .fourth-hobbie:hover{
+    width: 60%;
+    transition: 0.5s ease 0.3s;
+}
+.first-hobbie:hover .hobbie-title, .second-hobbie:hover .hobbie-title, .third-hobbie:hover .hobbie-title, .fourth-hobbie:hover .hobbie-title{
+    font-size: 50px;
+    transition: 0.5s ease 0.3s;
+}
+.first-hobbie:hover .hobbie-header, .second-hobbie:hover .hobbie-header, .third-hobbie:hover .hobbie-header, .fourth-hobbie:hover .hobbie-header{
+    margin-top: -4rem;
+    transition: 0.5s ease 0.3s;
+}
+.first-hobbie:hover .hobbie-text, .second-hobbie:hover .hobbie-text, .third-hobbie:hover .hobbie-text, .fourth-hobbie:hover .hobbie-text{
+    font-size: 16px;
+    transition: 0.5s ease 0.3s;
+}
+
+.hobbie-text{
+    text-align: center;
+    font-size: 13px;
+    padding: 0 2rem;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+}
+
+.first-hobbie:hover .hobbie-text, .second-hobbie:hover .hobbie-text, .third-hobbie:hover .hobbie-text, .fourth-hobbie:hover .hobbie-text{
+    opacity: 1;
+}
+
+/*Fim*/
+
+@keyframes blink-caret-two {
+    from, to { border-color: transparent }
+    50% { border-color: #272727; }
+  }
+
+#end{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #a09f9f;
+}
+
+#end .name{
+    text-align: center;
+    font-size: 70px;
+    color: #272727;
+    overflow: hidden;
+}
+
+#end .name h1{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret-two .75s step-end infinite;
+    font-size: 60px;
+    border-right: .15em solid #272727;
+    width: 75%;
+}
+#end .label{
+    font-size: 20px;
+    padding-top: 12rem;
+    text-align: center;
+    color: #272727;
+}
+
+#end .fa-chevron-up{
+    color: #272727;
+}
+
+#end .links{
+    font-size: 50px;
+    color: #272727;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    letter-spacing: 2rem;
+}
+
+#end a{
+    all: unset;
+    cursor: pointer;
+}
